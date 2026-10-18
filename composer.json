@@ -1,0 +1,91 @@
+{
+  "name": "alfasix/alfakit-feature-flags",
+  "description": "A feature flag control centre for Laravel Pennant in AlfaKit panels: every feature with its status, kill switch, percentage and scheduled rollouts, per-user and per-tenant targeting, rich values and a full audit trail.",
+  "keywords": [
+    "laravel",
+    "alfakit",
+    "pennant",
+    "feature-flags",
+    "feature-toggles",
+    "rollout"
+  ],
+  "homepage": "https://alfakit.dev/docs/plugins/feature-flags",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alfa Six",
+      "homepage": "https://alfasixbh.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/alfasixbh/alfakit/issues",
+    "source": "https://github.com/alfasixbh/alfakit"
+  },
+  "require": {
+    "php": "^8.3",
+    "alfasix/alfakit": "^0.1|@dev",
+    "laravel/pennant": "^1.26"
+  },
+  "suggest": {
+    "alfasix/alfakit-activity-log": "Also writes every feature flag change to the activity log."
+  },
+  "autoload": {
+    "psr-4": {
+      "AlfaSix\\AlfakitFeatureFlags\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AlfaSix\\AlfakitFeatureFlags\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AlfaSix\\AlfakitFeatureFlags\\AlfakitFeatureFlagsServiceProvider"
+      ]
+    },
+    "alfakit": {
+      "version": "^0.1",
+      "frontend": null,
+      "showcase": {
+        "demoPath": "feature-flags",
+        "tour": [
+          "Open Settings > Feature flags",
+          "Open a feature and change its rollout percentage",
+          "Target a user or tenant",
+          "Read the audit trail"
+        ],
+        "clips": [
+          "react-light",
+          "react-dark",
+          "vue-light",
+          "vue-dark",
+          "svelte-light",
+          "svelte-dark"
+        ],
+        "worksWith": [
+          "shield",
+          "analytics",
+          "teams"
+        ],
+        "highlights": [
+          "Every Laravel Pennant feature with its status",
+          "Kill switch",
+          "Percentage and scheduled rollouts",
+          "Per-user and per-tenant targeting",
+          "Rich values",
+          "Full audit trail",
+          "Hide pages, resources and actions behind flags"
+        ]
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
