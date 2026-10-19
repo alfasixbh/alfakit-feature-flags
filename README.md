@@ -1,6 +1,8 @@
 # AlfaKit Feature Flags
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="../../../art/alfasix/alfa-six-micro-white.svg"><img src="../../../art/alfasix/alfa-six-micro-navy.svg" alt="" width="24" height="18" align="top"></picture> <sub>by <a href="https://alfasixbh.com">Alfa Six</a></sub></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alfasixbh/alfakit/main/art/alfasix/alfa-six-micro-white.svg"><img src="https://raw.githubusercontent.com/alfasixbh/alfakit/main/art/alfasix/alfa-six-micro-navy.svg" alt="" width="24" height="18" align="top"></picture> <sub>by <a href="https://alfasixbh.com">Alfa Six</a></sub></p>
+
+> This is a read-only split of the [AlfaKit monorepo](https://github.com/alfasixbh/alfakit/tree/main/packages/plugins/feature-flags). Please open issues and pull requests there.
 
 A feature flag control centre for [Laravel Pennant](https://laravel.com/docs/pennant) in [AlfaKit](https://alfakit.dev) panels: every feature with its status and counts, a kill switch, values for everyone, stable percentage rollouts, schedules, per-user and per-tenant targeting, rich values and a full audit trail. It renders in React, Vue and Svelte with AlfaKit's built-in components.
 
