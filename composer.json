@@ -25,7 +25,7 @@
   },
   "require": {
     "php": "^8.4",
-    "alfasix/alfakit": "^0.1|@dev",
+    "alfasix/alfakit": "^0.2|@dev",
     "laravel/pennant": "^1.26"
   },
   "suggest": {
@@ -48,7 +48,7 @@
       ]
     },
     "alfakit": {
-      "version": "^0.1",
+      "version": "^0.2",
       "frontend": null,
       "showcase": {
         "demoPath": "feature-flags",
