@@ -18,6 +18,7 @@ use AlfaSix\Alfakit\Schemas\Components\Section;
 use AlfaSix\Alfakit\Schemas\Components\Utilities\Get;
 use AlfaSix\Alfakit\Schemas\Schema;
 use AlfaSix\Alfakit\Support\Enums\Width;
+use AlfaSix\Alfakit\Support\SearchQuery;
 use AlfaSix\Alfakit\Tables\Columns\TextColumn;
 use AlfaSix\Alfakit\Tables\Filters\SelectFilter;
 use AlfaSix\Alfakit\Tables\Table;
@@ -694,7 +695,7 @@ class ManageFeature extends Page
                 }
 
                 if ($search !== null && $search !== '') {
-                    $query->where('scope', 'like', '%'.str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $search).'%');
+                    SearchQuery::contains($query, 'scope', $search);
                 }
 
                 $paginator = $query->orderByDesc('updated_at')->orderByDesc('id')->paginate($perPage, ['id', 'scope', 'value', 'updated_at'], 'stored_page', $page);

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace AlfaSix\AlfakitFeatureFlags\Support;
 
+use AlfaSix\Alfakit\Support\SearchQuery;
 use Closure;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -234,7 +235,7 @@ final class ScopeResolver
         $attribute = is_string($this->titleAttribute) ? $this->titleAttribute : $this->guessSearchColumn($query->getModel());
 
         if ($search !== null && $search !== '' && $attribute !== null) {
-            $query->where($attribute, 'like', '%'.str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $search).'%');
+            SearchQuery::contains($query, $attribute, $search);
         }
 
         return $query;
